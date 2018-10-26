@@ -1,0 +1,228 @@
+.外边{
+    position: relative;
+    top: 27px;
+    background-color: #f2f2f2;
+    height: 900px;
+}
+.主体框{
+    position: relative;
+    top: 27px;
+    margin: 0 auto;
+    width: 1200px;
+    height: 600px;
+}
+.外框{
+    background-color: #f9f9f9;
+    height: 70px;
+}
+.方框{
+    position: relative;
+    top: 20px;
+    left: 25px;
+    float: left;
+    width: 5px;
+    height: 25px;
+    background-color: #f2c21f;
+}
+.用户字体{
+    position: relative;
+    top: 20px;
+    left: 30px;
+    float: left;
+    font-size: 19px;
+    margin-left: 10px;
+}
+.注册选项{
+    text-align: center;
+    background-color: #ffffff;
+}
+.注册选项 a{
+    text-decoration: none;
+    z-index: 1;
+}
+
+.手机注册 a{
+    position: relative;
+    color: black;
+    left: -100px;
+    top: 20px;
+}
+.竖线{
+    display: inline-block;
+    background-color: #f2f2f2;
+    width: 2px;
+    height: 17px;
+}
+.邮箱注册{
+    position: relative;
+    left: 100px;
+    top: -25px;
+    font-size: 18px;
+}
+.邮箱注册 a{
+    color: #999999;
+}
+.手机注册 a:hover{
+    color: rgba(112,112,112,0.9);
+}
+.邮箱注册 a:hover{
+    color: rgba(184,184,184,0.9);
+}
+.注册内容{
+    background-color: #ffffff;
+    height: 385px;
+}
+.form{
+    list-style: none;
+    height: 399px;
+    position: relative;
+    left: 400px;
+}
+.form div {
+    margin-bottom: 30px;
+    position: relative;
+    top: 37px;
+}
+.提示phone{
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+    color: #999999;
+}
+.span1{
+    display: inline-block;
+    width: 300px;
+    height: 31px;
+}
+.span1 input{
+    position: relative;
+    top: -1px;
+    padding-left:15px;
+    padding-right: 15px;
+    outline:none;
+    width: 50%;
+    height: 30px;
+    color: #333;
+}
+.提示name{
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+    color: #999999;
+}
+.span2{
+    display: inline-block;
+    width: 300px;
+    height: 31px;
+}
+.span2 input{
+    position: relative;
+    top: -1px;
+    padding-left:15px;
+    padding-right: 15px;
+    outline:none;
+    width: 50%;
+    height: 30px;
+    color: #333;
+}
+.提示pass{
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+    color: #999999;
+}
+.span3{
+    display: inline-block;
+    width: 300px;
+    height: 31px;
+}
+.span3 input{
+    position: relative;
+    top: -1px;
+    padding-left:15px;
+    padding-right: 15px;
+    outline:none;
+    width: 50%;
+    height: 30px;
+    color: #333;
+}
+.按钮{
+    margin-bottom: 30px;
+    position: relative;
+    color: #999;
+    height: 37px;
+}
+.注册按钮{
+    margin-left: 104px;
+    width: 185px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f2c21f;
+    color: #524311;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+}
+.底部{
+    background-color: #f9f9f9;
+    height: 60px;
+}
+.标签{
+    line-height: 70px;
+    text-align: center;
+}
+.have,.imm{
+    display: inline-block;
+    text-decoration: none;
+}
+.have a,.imm a{
+    text-decoration: none;
+    color: black;
+}
+.have{
+    font-size: 15px;
+    color: #999999;
+    position: relative;
+    left: -20px;
+}
+.imm a{
+    font-size: 16px;
+}
+.底框{
+    width: 1530px;
+    background-color: #28323b;
+    height: 40px;
+    position: relative;
+    bottom: -250px;
+    left: -170px;
+}
+.版权{
+    color: #d9d9d9;
+    position: relative;
+    left: 170px;
+    font-size: 12px;
+    line-height: 40px;
+}
+.导航{
+    position: relative;
+    bottom: 30px;
+    left: 920px;
+}
+.导航 li{
+    display: inline-block;
+}
+.导航 a{
+    color:#d9d9d9;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 5px;
+}

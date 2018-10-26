@@ -1,0 +1,39 @@
+footer{
+    margin-top: 26px;
+}
+dl{
+    display: inline-block;
+    margin: 3px;
+}
+dl{
+    font:12px/1.5 'Microsoft YaHei', Arial;
+}
+ footer a{
+    text-decoration: none;
+    color: black;
+}
+.g-ft{
+
+    background-color: #f7f8f9;
+}
+.g-inner{
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+}
+.m-links{
+    padding: 10px 90px;
+    overflow: hidden;
+}
+.m-links dl{
+    float: left;
+    width: 84px;
+    line-height: 24px;
+}
+.m-links dl dt{
+    font-weight: bold;
+}
+ footer a:hover{
+    color: #ff6600;
+    transition: all 0.2s linear;
+}

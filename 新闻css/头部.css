@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 100%;
+}
+#首行{
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    height: 40px;
+    line-height: 30px;
+    background: #eeeeee;
+    width: 1535px;
+    float: top;
+}
+#欢迎{
+    position: relative;
+    margin: 0 auto;
+    top: 8px;
+    left: 200px;
+    color: #92667c;
+    font-size: 13px;
+    padding: 0 0 0px 0;
+}
+.登陆注册{
+    position: relative;
+    top: -22px;
+    right: 150px;
+    display: inline-block;
+    color: black;
+    float: right;
+}
+.登陆注册 li{
+    margin: 0 20px;
+    display: inline-block;
+    font-size: 13px;
+    color: #92667c;
+}
+.登陆注册 li a{
+    text-decoration: none;
+}
+div img:first-of-type{
+    font-size: 5px;
+}
+#导航栏{
+    margin: -103px 0 0 500px;
+}
+#导航栏 li{
+    display: inline-block;
+    list-style-type: none;
+    width: 110px;
+    height: 99px;
+    text-align: center;
+    margin: 0 -5px 0 0;
+}
+#导航栏 a{
+    color: black;
+    text-decoration: none;
+    line-height: 99px;
+}
+#导航栏 a:hover{
+    color: #f2c21f;
+}
+#logo{
+    display: inline-block;
+    float: left;
+    margin: 20px 3px 0 150px;
+}
+#logo背景{
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    margin: -5px 0 10px 60px;
+    vertical-align: middle;
+    padding: 0 90px 25px 0px;
+    width: 300px;
+    height: 71px;
+}
+.导航{
+
+    position: relative;
+    top: 4px;
+    height: 43px;
+    background-color: #343434;
+}
+.option{
+    position: relative;
+    left: 180px;
+}
+.option li{
+    display: inline-block;
+    margin: 10px 5px 0 0;
+    position: relative;
+    top: -10px;
+}
+.option li a{
+    text-decoration: none;
+    color: #999;
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+    line-height: 41px;
+    font-size: 14px;
+}
+.新闻首页{
+    height: 43px;
+    width: 90px;
+    background-color: #f2c21f;
+}
+#color{
+    color: #333;
+}
+.搜索{
+    position: relative;
+    left: 1220px;
+    top: -45px;
+    border: none;
+    background-color: #f2f2f2;
+    width: 160px;
+    height: 28px;
+    border-radius: 14px;
+}
+.搜索框{
+    border: none;
+    outline:none;
+    position: relative;
+    left: 15px;
+    top: 2px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    width: 136px;
+    height: 23px;
+}

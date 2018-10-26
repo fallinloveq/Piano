@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页-钢琴网</title>
+    <link href="首页css/头部.css" rel="stylesheet" type="text/css">
+    <link href="首页css/身体.css" rel="stylesheet" type="text/css">
+    <link href="首页css/底部.css" rel="stylesheet" type="text/css">
+    <script src="js1/jquery-1.12.0.min.js"></script>
+    <style>
+        .轮播,ul,li{
+            margin:0;
+            padding:0;
+        }
+        #list{
+            height:250px;
+            overflow:hidden;
+        }
+        #list li {
+            list-style:none;
+        }
+        #list img{
+            width: 100%;
+            border: 0;
+            vert-align: middle;
+        }
+        .首页 span{
+            display: inline-block;
+            height: 90%;
+            width: 100%;
+            border-radius: 0 0 5px 5px;
+            background-color: #343434;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<span class="置顶"><a name="ass"></a></span>
+<header>
+    <div id="首行">
+        <p id="欢迎">欢迎来到钢琴网!</p>
+        <ul class="登陆注册">
+            <li><a href="登陆.html">登陆</a></li>
+            <li><a href="注册.html">注册</a></li>
+        </ul>
+    </div>
+    <div class="debug">
+        <div id="10">
+            <div id="logo背景">
+                <img src="首页photo/logo.png" width="181" height="80" id="logo">
+            </div>
+            <ul id="导航栏" style="position: relative;top: 25px;">
+                <li><a href="首页.html" class="首页"><span>首页</span></a></li>
+                <li><a href="新闻.html">新闻</a></li>
+                <li><a href="钢琴曲.html">钢琴曲</a></li>
+                <li><a href="#">钢琴谱</a></li>
+                <li><a href="#">考级</a></li>
+                <li><a href="#">论文</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <p class="阴影2" style="position: relative;top: 27px;"></p>
+    <p class="阴影1" style="position: relative;top: 27px;"></p>
+</header>
+<div id="bjys" class="背景颜色">
+<section class="身体边框">
+    <a href="#ass" style="position: fixed;bottom: 20px;right: 10px;color: black;font-size: 12px;">^<br/>回到顶部</a>
+    <div class="轮播">
+        <ul id="list">
+        <li><img src="轮播照片/22.jpg"/> </li>
+        <li><img src="轮播照片/1528419373673.jpg"/> </li>
+        <li><img src="轮播照片/起风了.jpg"/> </li>
+        <li><img src="轮播照片/后来的我们.jpg"/></li>
+        <li><img src="轮播照片/陈奕迅.jpg"/></li>
+        <li><img src="轮播照片/复仇者联盟.jpg"/></li>
+        <li><img src="轮播照片/毛不易.jpg"></li>
+        </ul>
+        <ul  class="bt-tab" id="bt-tab">
+            <li><a href="javascript:void(0)" onclick="showimg(1)" style="color: white;text-decoration: none">1</a> </li>
+            <li><a href="javascript:void(0)" onclick="showimg(2)"style="color: white;text-decoration: none">2</a> </li>
+            <li><a href="javascript:void(0)" onclick="showimg(3)"style="color: white;text-decoration: none">3</a> </li>
+            <li><a href="javascript:void(0)" onclick="showimg(4)"style="color: white;text-decoration: none">4</a> </li>
+            <li><a href="javascript:void(0)" onclick="showimg(5)"style="color: white;text-decoration: none">5</a> </li>
+            <li><a href="javascript:void(0)" onclick="showimg(6)"style="color: white;text-decoration: none">6</a> </li>
+            <li><a href="javascript:void(0)" onclick="showimg(7)"style="color: white;text-decoration: none">7</a> </li>
+        </ul>
+
+
+        <script>
+            //加载图片
+            var index=1;
+            function loadImg(){
+                $("#list").children().hide();//隐藏所有的图片
+                $("#list li").eq(index).show();//显示某一张图片
+                index++;
+                if(index>3){
+                    index=0;
+                }//
+            }
+            var timer=window.setInterval('loadImg()',5000);//设置定时器
+
+            //设置鼠标悬停效果
+            $(function(){
+                //鼠标悬浮时候
+                $("#list li").mouseover(function(){
+                    //清除定时器
+                    clearInterval(timer);
+                });
+                //鼠标离开时候
+                $("#list li").mouseout(function(){
+                    timer=window.setInterval('loadImg()',2000);//重新设置定时器
+                });
+            });
+            function showimg(imgnum){
+                index = imgnum-1;
+                loadImg();
+            }
+        </script>
+        <script>
+            function show() {
+                if (document.getElementById('jss').style.display == 'block'){
+                    document.getElementById('jss').style.display = 'none';
+
+
+                }
+                else{
+                    document.getElementById('jss').style.display = 'block';
+                    document.getElementById('ccm').style.height ='3800px';
+                    document.getElementById('bjys').style.height ='7500px';
+
+                }
+
+            }
+
+        </script>
+
+    </div>
+    <div id="con">
+        <ul class="conn">
+            <li><img src="首页photo/white.jpg" width="644" height="300" id="photo"></li>
+            <li class="ss"><a href="#"id="连接">白色情人节</a></li>
+            <li class="black" style="bottom: 0px"></li>
+        </ul>
+    </div>
+    <div class="二维码">
+        <div class="边框">
+            <h1>
+                音乐交流
+            </h1>
+            <img src="首页photo/QQ图片20180529163403.png" width="164" height="164">
+        </div>
+    </div>
+    <div class="Recommend">
+        <div>
+            <div class="left">
+                <ul class="headline">
+                    <li class="pull-left">
+                        <a>推荐</a>
+                    </li>
+                    <li class="pull-left2">
+                        <a href="#">新闻</a>
+                    </li>
+                    <li class="pull-left2">
+                        <a href="#">钢琴曲</a>
+                    </li>
+                    <li class="pull-left2">
+                        <a href="#">曲谱</a>
+                    </li>
+                    <li class="pull-left2">
+                        <a href="#">视频</a>
+                    </li>
+                </ul>
+                <div class="新闻内容">
+                    <ul class="内容">
+                        <li id="连接1">
+                            <div class="照片1">
+                                <a href="#">
+                                    <img src="首页photo/1.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" title="名谱推荐｜青春纪念册-可米小子" class="备注1">名谱推荐｜青春纪念册-可米小子</a>
+                                <div>
+                                    <span class="day" id="da">1小时前</span>
+                                    <span>
+                                <a href="#" class="piano" id="pi">流行先锋</a>
+                            </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="连接2">
+                            <div class="照片2">
+                                <a href="#"><img src="首页photo/2.jpg"></a>
+                            </div>
+                            <div>
+                                <a href="#" title="名曲推荐｜New York State Of Mind-Billy Joel" class="备注2">名曲推荐｜New York State Of Mind-Billy Joel</a>
+                                <div>
+                                    <span class="day1" id="da1">4天前</span>
+                                    <span>
+                                <a href="#" class="piano1" id="pi1">流行先锋</a>
+                            </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="连接3">
+                            <div class="照片3">
+                                <a href="#"><img src="首页photo/3.jpg"></a>
+                            </div>
+                            <div>
+                                <a href="#" title="nd-Billy Joel 新谱推荐｜送你一匹马-电视剧《北京女子图鉴》主题曲" class="备注3">nd-Billy Joel 新谱推荐｜送你一匹马-电视剧《北京女子图鉴》主题曲<br/></a>
+                                <div>
+                                    <span class="day">5天前</span>
+                                    <span>
+                                <a href="#" class="piano">流行先锋</a>
+                            </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="新闻内容">
+                    <ul class="内容">
+                        <li id="连接1">
+                            <div class="照片1">
+                                <a href="#"><img src="首页photo/4.jpg"></a>
+                            </div>
+                            <div>
+                                <a href="#" title="流行钢琴教学｜《纸短情长》-琥珀琴师Louis" class="备注1">流行钢琴教学｜《纸短情长》-琥珀琴师Louis</a>
+                                <div>
+                                    <span class="day" id="da2">6天前</span>
+                                    <span>
+                                <a href="#" class="piano" id="pi2">流行视频趋势</a>
+                            </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="连接2">
+                            <div class="照片2">
+                                <a href="#"><img src="首页photo/5.jpg"></a>
+                            </div>
+                            <div>
+                                <a href="#" title="琴师Louis新曲推荐｜《不爱我就拉倒》-周杰伦" class="备注2">琴师Louis新曲推荐｜《不爱我就拉倒》-周杰伦</a>
+                                <div>
+                                    <span class="day1" id="da2" style="position: relative;left: 220px;">1星期前</span>
+                                    <span>
+                                <a href="#" class="piano1" id="pi2" style="position: relative;left: -32px;">流行先锋</a>
+                            </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="连接3">
+                            <div class="照片3">
+                                <a href="#"><img src="首页photo/6.jpg"></a>
+                            </div>
+                            <div>
+                                <a href="#" title="流行钢琴教学｜电视剧“恋爱先生”主题曲《温暖》-HM的钢琴城堡" class="备注3">流行钢琴教学｜电视剧“恋爱先生”主题曲《温暖》-HM的钢琴城堡<br/></a>
+                                <div>
+                                    <span class="day">4天前</span>
+                                    <span>
+                                <a href="#" class="piano" style="position: relative;left: -20px">流行视频趋势</a>
+                            </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Musician">
+                <div>
+                    <p class="bt">音乐人推荐</p>
+                    <ul class="user-list">
+                        <li class="focus-recommend">
+                            <div class="user-list-head">
+                                <a href="#" class="thumb">
+                                    <img src="首页photo/17.jpg">
+                                </a>
+                                <span class="label">
+                                    <img src="首页photo/认证.png">
+                                </span>
+                            </div>
+                            <div class="musician-main">
+                                <div class="user-name">
+                                    <a href="#">悠悠·琴韵</a>
+                                </div>
+                                <span class="brief">音乐成就人生的梦想！</span>
+                            </div>
+                            <div class="operate">
+                                <a href="#">+关注</a>
+                            </div>
+                        </li>
+                        <li class="focus-recommend">
+                            <div class="user-list-head">
+                                <a href="#" class="thumb">
+                                    <img src="首页photo/18.jpg">
+                                </a>
+                                <span class="label">
+                                    <img src="首页photo/认证.png">
+                                </span>
+                            </div>
+                            <div class="musician-main">
+                                <div class="user-name">
+                                    <a href="#">琥珀琴师Louis</a>
+                                </div>
+                                <span class="brief">穿越古典与流行,感受心灵的共鸣。擅长NewAge与古典音乐的跨界演奏风格,师从沃罗捏日国立艺术学院教授安东·马利科夫和旅俄钢琴家梁大威。</span>
+                            </div>
+                            <div class="operate">
+                                <a href="#">+关注</a>
+                            </div>
+                        </li>
+                        <li class="focus-recommend">
+                            <div class="user-list-head">
+                                <a href="#" class="thumb">
+                                    <img src="首页photo/19.jpg">
+                                </a>
+                                <span class="label">
+                                    <img src="首页photo/认证.png">
+                                </span>
+                            </div>
+                            <div class="musician-main">
+                                <div class="user-name">
+                                    <a href="#">三石钢琴教学法</a>
+                                </div>
+                            </div>
+                            <div class="operate">
+                                <a href="#">+关注</a>
+                            </div>
+                        </li>
+                        <li class="focus-recommend">
+                        <div class="user-list-head">
+                            <a href="#" class="thumb">
+                                <img src="首页photo/20.jpg">
+                            </a>
+                            <span class="label">
+                                    <img src="首页photo/认证.png">
+                                </span>
+                        </div>
+                        <div class="musician-main">
+                            <div class="user-name">
+                                <a href="#">环球新闻</a>
+                            </div>
+                            <span class="brief">专注钢琴新闻三十年~</span>
+                        </div>
+                        <div class="operate">
+                            <a href="#">+关注</a>
+                        </div>
+                    </li>
+                        <li class="focus-recommend">
+                            <div class="user-list-head">
+                                <a href="#" class="thumb">
+                                    <img src="首页photo/33.jpg">
+                                </a>
+                                <span class="label">
+                                    <img src="首页photo/认证.png">
+                                </span>
+                            </div>
+                            <div class="musician-main">
+                                <div class="user-name">
+                                    <a href="#">爱乐经典</a>
+                                </div>
+                                <span class="brief">专业从事打谱扒谱，求关注！</span>
+                            </div>
+                            <div class="operate">
+                                <a href="#">+关注</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="focus-recommend">
+                        <a href="#">
+                            <img src="首页photo/44.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-index">
+        <div>
+            <div class="left">
+                <ul class="headline">
+                    <li class="pull-left">
+                        <a>视频</a>
+                    </li>
+                    <li class="pull-left2">
+                        <a href="#">教程</a>
+                    </li>
+                    <li class="pull-left2">
+                        <a href="#">欣赏</a>
+                    </li>
+                    <li class="pull-left2">
+                        <a href="#">综合</a>
+                    </li>
+                </ul>
+                <span class="全部"><a href="#">全部></a></span>
+                <div class="新闻内容">
+                    <ul class="内容">
+                        <li id="连接1">
+                            <div class="照片1">
+                                <a href="#">
+                                    <img src="首页photo/7.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" title="名家教学视频｜五指运动的秘密—每根手指应该遵循怎样的运动规律--主讲人秦川" class="备注1">名家教学视频｜五指运动的秘密—...</a>
+                                <div>
+                                    <span class="day" id="da">1小时前</span>
+                                    <span>
+                                <a href="#" class="piano" id="pi">流行先锋</a>
+                            </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="连接2">
+                            <div class="照片2">
+                                <a href="index3.html" target="_blank"><img src="首页photo/8.jpg"></a>
+                            </div>
+                            <div>
+                                <a href="index3.html" target="_blank" title="HM的钢琴城堡｜电影“我的少女时代”主题曲《小幸运》" class="备注2">HM的钢琴城堡｜电影“我的少女时代”主题曲《小幸运》</a>
+                                <div>
+                                    <span class="day1" id="da1">4天前</span>
+                                    <span>
+                                <a href="#" class="piano1" id="pi1">流行视频趋势 </a>
+                            </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="连接3">
+                            <div class="照片3">
+                                <a href="#"><img src="首页photo/9.jpg"></a>
+                            </div>
+                            <div>
+                                <a href="#" title="林昶爵士专场音乐会丨《 windows》" class="备注3">林昶爵士专场音乐会丨《 windows》<br/></a>
+                                <div>
+                                    <span class="day">5天前</span>
+                                    <span>
+                                <a href="#" class="piano">流行视频趋势</a>
+                            </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="新闻内容">
+                    <ul class="内容">
+                        <li id="连接1">
+                            <div class="照片1">
+                                <a href="#"><img src="首页photo/10.jpg"></a>
+                            </div>
+                            <div>
+                                <a href="#" title="经典名曲教学｜《四季-六月:船歌》- 柴可夫斯基" class="备注1">经典名曲教学｜《四季-六月:船歌》- 柴可夫斯基</a>
+                                <div>
+                                    <span class="day" id="da2">6天前</span>
+                                    <span>
+                                <a href="#" class="piano" id="pi2">环球古典视频</a>
+                            </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="连接2">
+                            <div class="照片2">
+                                <a href="#"><img src="首页photo/11.jpg"></a>
+                            </div>
+                            <div>
+                                <a href="#" title="流行钢琴教学｜《起风了》-琥珀琴师Louis" class="备注2">流行钢琴教学｜《起风了》-琥珀琴师Louis</a>
+                                <div>
+                                    <span class="day1" id="da2" style="position: relative;left: 220px;">1星期前</span>
+                                    <span>
+                                <a href="#" class="piano1" id="pi2" style="position: relative;left: -32px;">流行视频趋势</a>
+                            </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="连接3">
+                            <div class="照片3">
+                                <a href="#"><img src="首页photo/7.jpg"></a>
+                            </div>
+                            <div>
+                                <a href="#" title="名家教学视频｜钢琴大师教你科学高效的练琴 - 秦川" class="备注3">名家教学视频｜钢琴大师教你科学高效的练琴 - 秦川<br/></a>
+                                <div>
+                                    <span class="day">4天前</span>
+                                    <span>
+                                <a href="#" class="piano" style="position: relative;left: -20px">环球古典视频</a>
+                            </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Musician3">
+                <div>
+                    <p class="bt3">视频专栏推荐</p>
+                    <ul class="user-list">
+                        <li class="focus-recommend1">
+                            <div class="user-list-head1">
+                                <a href="#" class="thumb1">
+                                    <img src="首页photo/12.jpg">
+                                </a>
+                            </div>
+                            <div class="musician-main1">
+                                <div class="user-name1">
+                                    <a href="#">秦川钢琴独奏音乐会</a>
+                                </div>
+                                <span class="brief1">
+                                    <a href="#">
+                                        <img src="首页photo/认证1.png">
+                                        <span>环球古典视频</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="focus-recommend1">
+                            <div class="user-list-head1">
+                                <a href="#" class="thumb1">
+                                    <img src="首页photo/13.jpg">
+                                </a>
+                            </div>
+                            <div class="musician-main1">
+                                <div class="user-name1">
+                                    <a href="#">马克西姆Maksim</a>
+                                </div>
+                                <span class="brief1">
+                                    <a href="#">
+                                        <img src="首页photo/认证1.png">
+                                        <span>环球古典视频</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="focus-recommend1">
+                            <div class="user-list-head1">
+                                <a href="#" class="thumb1">
+                                    <img src="首页photo/14.jpg">
+                                </a>
+                            </div>
+                            <div class="musician-main1">
+                                <div class="user-name1">
+                                    <a href="#">李云迪钢琴演奏欣赏</a>
+                                </div>
+                                <span class="brief1">
+                                    <a href="#">
+                                        <img src="首页photo/认证1.png">
+                                        <span>环球古典视频</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="focus-recommend1">
+                            <div class="user-list-head1">
+                                <a href="#" class="thumb1">
+                                    <img src="首页photo/15.jpg">
+                                </a>
+                            </div>
+                            <div class="musician-main1">
+                                <div class="user-name1">
+                                    <a href="#">王羽佳钢琴演奏欣赏</a>
+                                </div>
+                                <span class="brief1">
+                                    <a href="#">
+                                        <img src="首页photo/认证1.png">
+                                        <span>环球古典视频</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="focus-recommend1">
+                            <div class="user-list-head1">
+                                <a href="#" class="thumb1">
+                                    <img src="首页photo/16.jpg">
+                                </a>
+                            </div>
+                            <div class="musician-main1">
+                                <div class="user-name1">
+                                    <a href="#">久石让钢琴演奏欣赏</a>
+                                </div>
+                                <span class="brief1">
+                                    <a href="#">
+                                        <img src="首页photo/认证1.png">
+                                        <span>环球古典视频</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="focus-recommend3">
+                        <a href="#">
+                            <img src="首页photo/99.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-list">
+        <div class="rankinglist">
+            <ul class="headline">
+                <li class="pull-left">
+                    <a>钢琴曲</a>
+                </li>
+                <li class="pull-left2">
+                    <a href="#">曲集</a>
+                </li>
+                <li class="pull-left2">
+                    <a href="#">电台</a>
+                </li>
+                <li class="pull-left2">
+                    <a href="#">唱片</a>
+                </li>
+            </ul>
+            <span class="全部1"><a href="#">全部></a></span>
+            <div class="one1">
+                <div class="one1-1">
+                    <div class="one1-1-1">
+                        <a href="#">
+                            <img src="钢琴曲photo/untitled.png" class="data-photo">
+                        </a>
+                    </div>
+                    <div class="media">
+                        <a href="#" class="subject">钢琴名曲欣赏TOP30</a>
+                        <a href="#" class="ranking">
+                            播放全部
+                        </a>
+                    </div>
+                </div>
+                <div class="listbox">
+                    <ul>
+                        <li class="odd">
+                            <a href="#" title="夜的钢琴曲五" class="title">
+                                <span class="txt-label">1</span>
+                                <span>夜的钢琴曲五</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="少女的祈祷-巴达捷芙斯卡" class="title">
+                                <span class="txt-label">2</span>
+                                <span>少女的祈祷-巴达捷芙斯卡</span>
+                            </a>
+                        </li>
+                        <li  class="odd">
+                            <a href="#" title="梦中的婚礼-克莱德曼" class="title">
+                                <span class="txt-label">3</span>
+                                <span>梦中的婚礼-克莱德曼</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="消愁-毛不易" class="title">
+                                <span class="txt-label" id="txt-label">4</span>
+                                <span>消愁-毛不易</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="体面（前任3：再见前任插" class="title">
+                                <span class="txt-label" id="txt-label">5</span>
+                                <span>体面（前任3：再见前任插</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="克罗地亚狂想曲(Croatian Rhapsody)-马克西姆Maksim.Mrvica" class="title">
+                                <span class="txt-label" id="txt-label">6</span>
+                                <span>克罗地亚狂想曲(Croatian Rhapsody)-马克西姆</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="命运交响曲-贝多芬" class="title">
+                                <span class="txt-label" id="txt-label">7</span>
+                                <span>命运交响曲-贝多芬</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="马克西姆世界最快钢琴曲 野蜂飞舞" class="title">
+                                <span class="txt-label" id="txt-label">8</span>
+                                <span>马克西姆世界最快钢琴曲 野蜂飞舞</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="See You Again （《速度与激情7》主题曲）" class="title">
+                                <span class="txt-label" id="txt-label">9</span>
+                                <span>See You Again （《速度与激情7》主题曲）</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="魔王-舒伯特" class="title">
+                                <span class="txt-label" id="txt-label">10</span>
+                                <span>魔王-舒伯特</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="one1">
+                <div class="one1-1">
+                    <div class="one1-1-1">
+                        <a href="#">
+                            <img src="钢琴曲photo/2.png" class="data-photo">
+                        </a>
+                    </div>
+                    <div class="media">
+                        <a href="#" class="subject">热门古典琴曲TOP30</a>
+                        <a href="#" class="ranking">
+                            播放全部
+                        </a>
+                    </div>
+                </div>
+                <div class="listbox">
+                    <ul>
+                        <li class="odd">
+                            <a href="#" title="C小调第二号匈牙利狂想曲-李斯特" class="title">
+                                <span class="txt-label">1</span>
+                                <span>C小调第二号匈牙利狂想曲-李斯特</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="蓝色多瑙河-约翰·施特劳斯" class="title">
+                                <span class="txt-label">2</span>
+                                <span>蓝色多瑙河-约翰·施特劳斯</span>
+                            </a>
+                        </li>
+                        <li  class="odd">
+                            <a href="#" title="李斯特的钟" class="title">
+                                <span class="txt-label">3</span>
+                                <span>李斯特的钟</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="西班牙舞曲（选自《中外钢琴独奏小品精选4》）" class="title">
+                                <span class="txt-label" id="txt-label">4</span>
+                                <span>西班牙舞曲（选自《中外钢琴独奏小品精选4》）</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="贝多芬 C小调第八号钢琴奏鸣曲“悲怆” Op.13 III.回旋曲：快板" class="title">
+                                <span class="txt-label" id="txt-label">5</span>
+                                <span>贝多芬 C小调第八号钢琴奏鸣曲“悲怆” Op.13 III.回旋曲：快板</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="钟表店-安德松" class="title">
+                                <span class="txt-label" id="txt-label">6</span>
+                                <span>钟表店-安德松</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="浪漫曲（选自英皇考级三级2017&2018大纲）" class="title">
+                                <span class="txt-label" id="txt-label">7</span>
+                                <span>浪漫曲（选自英皇考级三级2017&2018大纲）</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="春节序曲-朗朗" class="title">
+                                <span class="txt-label" id="txt-label">8</span>
+                                <span>春节序曲-朗朗</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="G大调奏鸣曲Allegro（选自《巴斯蒂安世界钢琴名曲集3》）-贝多芬" class="title">
+                                <span class="txt-label" id="txt-label">9</span>
+                                <span>G大调奏鸣曲Allegro（选自《巴斯蒂安世界钢琴名曲集3》）-贝多芬</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="命运交响曲-贝多芬" class="title">
+                                <span class="txt-label" id="txt-label">10</span>
+                                <span>命运交响曲-贝多芬</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="one1">
+                <div class="one1-1">
+                    <div class="one1-1-1">
+                        <a href="#">
+                            <img src="钢琴曲photo/3.png" class="data-photo">
+                        </a>
+                    </div>
+                    <div class="media">
+                        <a href="#" class="subject">热门流行琴曲TOP30</a>
+                        <a href="#" class="ranking">
+                            播放全部
+                        </a>
+                    </div>
+                </div>
+                <div class="listbox">
+                    <ul>
+                        <li class="odd">
+                            <a href="#" title="纸短情长-琥珀琴师Louis" class="title">
+                                <span class="txt-label">1</span>
+                                <span>纸短情长-琥珀琴师Louis</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="菊次郎的夏天-久石让" class="title">
+                                <span class="txt-label">2</span>
+                                <span>菊次郎的夏天-久石让</span>
+                            </a>
+                        </li>
+                        <li  class="odd">
+                            <a href="index.html" target="_blank" title="天空之城-久石让" class="title">
+                                <span class="txt-label">3</span>
+                                <span>天空之城-久石让</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="We Dont Talk Anymore" class="title">
+                                <span class="txt-label" id="txt-label">4</span>
+                                <span>We Dont Talk Anymore</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="秒速5センチメートル（动画《秒速5厘米》OST） - 天门" class="title">
+                                <span class="txt-label" id="txt-label">5</span>
+                                <span>秒速5センチメートル（动画《秒速5厘米》OST） - 天门</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="追光者（电视剧《夏至未至》插曲）-岑宁儿" class="title">
+                                <span class="txt-label" id="txt-label">6</span>
+                                <span>追光者（电视剧《夏至未至》插曲）-岑宁儿</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="平凡之路（电影《后会无期》主题曲）-朴树" class="title">
+                                <span class="txt-label" id="txt-label">7</span>
+                                <span>平凡之路（电影《后会无期》主题曲）-朴树</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="起风了-琥珀琴师Louis" class="title">
+                                <span class="txt-label" id="txt-label">8</span>
+                                <span>起风了-琥珀琴师Louis</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="旅行青蛙-琥珀琴师Louis" class="title">
+                                <span class="txt-label" id="txt-label">9</span>
+                                <span>旅行青蛙-琥珀琴师Louis</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="绒花（电影《芳华》片尾" class="title">
+                                <span class="txt-label" id="txt-label">10</span>
+                                <span>绒花（电影《芳华》片尾</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="one1">
+                <div class="one1-1">
+                    <div class="one1-1-1">
+                        <a href="#">
+                            <img src="钢琴曲photo/4.png" class="data-photo">
+                        </a>
+                    </div>
+                    <div class="media">
+                        <a href="#" class="subject">曲集TOP30</a>
+                        <a href="#" class="ranking">
+                            查看全部
+                        </a>
+                    </div>
+                </div>
+                <div class="listbox">
+                    <ul>
+                        <li class="odd">
+                            <a href="#" title="用一首歌，“听”一部电影" class="titlee">
+                                <span class="txt-labell">1</span>
+                                <span class="thumb3">
+                                    <img src="钢琴曲photo/one.jpg">
+                                </span>
+                                <span class="ranking-txt">用一首歌，“听”一部电影</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="动漫中的那些钢琴" class="titlee">
+                                <span class="txt-labell">2</span>
+                                <span class="thumb3">
+                                    <img src="钢琴曲photo/two.jpg">
+                                </span>
+                                <span class="ranking-txt1">动漫中的那些钢琴</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="给世界一片宁静，不管天气如何" class="titlee">
+                                <span class="txt-labell">3</span>
+                                <span class="thumb3">
+                                    <img src="钢琴曲photo/three.jpg">
+                                </span>
+                                <span class="ranking-txt">给世界一片宁静，</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="治愈小情歌｜听完我们谈个恋爱吧" class="titlee">
+                                <span class="txt-labell">4</span>
+                                <span class="thumb3">
+                                    <img src="钢琴曲photo/four.jpg">
+                                </span>
+                                <span class="ranking-txt1">治愈小情歌｜听完</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="世界名钢琴曲100首" class="titlee">
+                                <span class="txt-labell">5</span>
+                                <span class="thumb3">
+                                    <img src="钢琴曲photo/five.jpg">
+                                </span>
+                                <span class="ranking-txt">世界名钢琴曲100首</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-list" style="position: relative;top: 150px;">
+        <div class="rankinglist">
+            <ul class="headline">
+                <li class="pull-left">
+                    <a>钢琴谱</a>
+                </li>
+                <li class="pull-left2">
+                    <a href="#">谱集</a>
+                </li>
+                <li class="pull-left2">
+                    <a href="#">曲谱专栏</a>
+                </li>
+            </ul>
+            <span class="全部1"><a href="#">全部></a></span>
+            <div class="one1">
+                <div class="one1-1">
+                    <div class="one1-1-1">
+                        <a href="#">
+                            <img src="首页photo/one1.png" class="data-photo">
+                        </a>
+                    </div>
+                    <div class="media">
+                        <a href="#" class="subject">钢琴谱精选TOP30</a>
+                        <a href="#" class="ranking">
+                            播放全部
+                        </a>
+                    </div>
+                </div>
+                <div class="listbox">
+                    <ul>
+                        <li class="odd">
+                            <a href="#" title="不爱我就拉倒-周杰伦" class="title">
+                                <span class="txt-label">1</span>
+                                <span>不爱我就拉倒-周杰伦</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="纸短情长-烟把儿乐队" class="title">
+                                <span class="txt-label">2</span>
+                                <span>纸短情长-烟把儿乐队</span>
+                            </a>
+                        </li>
+                        <li  class="odd">
+                            <a href="#" title="佛系少女-冯提莫" class="title">
+                                <span class="txt-label">3</span>
+                                <span>佛系少女-冯提莫</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="小幸运 （电影《我的少女时代》的主题曲）-田馥甄" class="title">
+                                <span class="txt-label" id="txt-label">4</span>
+                                <span>小幸运 （电影《我的少女时代》的主题曲）-田馥甄</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="风之甬道《龙猫》插曲" class="title">
+                                <span class="txt-label" id="txt-label">5</span>
+                                <span>风之甬道《龙猫》插曲</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="梦中的婚礼-理查德·克莱德曼 " class="title">
+                                <span class="txt-label" id="txt-label">6</span>
+                                <span>梦中的婚礼-理查德·克莱德曼 </span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="天空之城-久石让" class="title">
+                                <span class="txt-label" id="txt-label">7</span>
+                                <span>天空之城-久石让</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="影视《放牛班的春天》全套钢琴谱集" class="title">
+                                <span class="txt-label" id="txt-label">8</span>
+                                <span>影视《放牛班的春天》全套钢琴谱集</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="经典电影《海上钢琴师》全套钢琴谱" class="title">
+                                <span class="txt-label" id="txt-label">9</span>
+                                <span>经典电影《海上钢琴师》全套钢琴谱</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="南山南-张磊" class="title">
+                                <span class="txt-label" id="txt-label">10</span>
+                                <span>南山南-张磊</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="one1">
+                <div class="one1-1">
+                    <div class="one1-1-1">
+                        <a href="#">
+                            <img src="首页photo/two2.png" class="data-photo">
+                        </a>
+                    </div>
+                    <div class="media">
+                        <a href="#" class="subject">热门古典钢琴谱TOP30</a>
+                        <a href="#" class="ranking">
+                            播放全部
+                        </a>
+                    </div>
+                </div>
+                <div class="listbox">
+                    <ul>
+                        <li class="odd">
+                            <a href="#" title="月光-德彪西" class="title">
+                                <span class="txt-label">1</span>
+                                <span>月光-德彪西</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="卡农-帕赫贝尔" class="title">
+                                <span class="txt-label">2</span>
+                                <span>卡农-帕赫贝尔</span>
+                            </a>
+                        </li>
+                        <li  class="odd">
+                            <a href="#" title="六月船歌-柴可夫斯基" class="title">
+                                <span class="txt-label">3</span>
+                                <span>六月船歌-柴可夫斯基</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="蓝色多瑙河-小约翰·施特劳斯" class="title">
+                                <span class="txt-label" id="txt-label">4</span>
+                                <span>蓝色多瑙河-小约翰·施特劳斯</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="出埃及记-马克西姆" class="title">
+                                <span class="txt-label" id="txt-label">5</span>
+                                <span>出埃及记-马克西姆</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="“悲怆”钢琴奏鸣曲OP.13 第二乐章-贝多芬" class="title">
+                                <span class="txt-label" id="txt-label">6</span>
+                                <span>“悲怆”钢琴奏鸣曲OP.13 第二乐章-贝多芬</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="托卡塔 OP.11-普罗科菲耶夫 " class="title">
+                                <span class="txt-label" id="txt-label">7</span>
+                                <span>托卡塔 OP.11-普罗科菲耶夫 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="拉德斯基进行曲（选自《中外钢琴独奏小品精选2》）" class="title">
+                                <span class="txt-label" id="txt-label">8</span>
+                                <span>拉德斯基进行曲（选自《中外钢琴独奏小品精选2》）</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="音乐瞬间-舒伯特" class="title">
+                                <span class="txt-label" id="txt-label">9</span>
+                                <span>音乐瞬间-舒伯特</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="天鹅-圣·桑" class="title">
+                                <span class="txt-label" id="txt-label">10</span>
+                                <span>天鹅-圣·桑</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="one1">
+                <div class="one1-1">
+                    <div class="one1-1-1">
+                        <a href="#">
+                            <img src="首页photo/three3.png" class="data-photo">
+                        </a>
+                    </div>
+                    <div class="media">
+                        <a href="#" class="subject">热门流行钢琴谱TOP30</a>
+                        <a href="#" class="ranking">
+                            播放全部
+                        </a>
+                    </div>
+                </div>
+                <div class="listbox">
+                    <ul>
+                        <li class="odd">
+                            <a href="#" title="我们（电影《后来的我们》主题曲） - 陈奕迅" class="title">
+                                <span class="txt-label">1</span>
+                                <span>我们（电影《后来的我们》主题曲） - 陈奕迅</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="River Flows In Your-李闰珉" class="title">
+                                <span class="txt-label">2</span>
+                                <span>River Flows In Your-李闰珉</span>
+                            </a>
+                        </li>
+                        <li  class="odd">
+                            <a href="#" title="戒烟-李荣浩" class="title">
+                                <span class="txt-label">3</span>
+                                <span>戒烟-李荣浩</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="初恋的地方-电影《超时空同居》主题曲" class="title">
+                                <span class="txt-label" id="txt-label">4</span>
+                                <span>初恋的地方-电影《超时空同居》主题曲</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="The Avengers-电影《复仇者联盟3：无限战争》" class="title">
+                                <span class="txt-label" id="txt-label">5</span>
+                                <span>The Avengers-电影《复仇者联盟3：无限战争》</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="最美的期待-周笔畅" class="title">
+                                <span class="txt-label" id="txt-label">6</span>
+                                <span>最美的期待-周笔畅</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="童年的回忆-理查德.克莱德曼" class="title">
+                                <span class="txt-label" id="txt-label">7</span>
+                                <span>童年的回忆-理查德.克莱德曼</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="神秘园之歌-神秘园" class="title">
+                                <span class="txt-label" id="txt-label">8</span>
+                                <span>神秘园之歌-神秘园</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="哑巴-薛之谦" class="title">
+                                <span class="txt-label" id="txt-label">9</span>
+                                <span>哑巴-薛之谦</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="告白气球-周杰伦" class="title">
+                                <span class="txt-label" id="txt-label">10</span>
+                                <span>告白气球-周杰伦</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="one1">
+                <div class="one1-1">
+                    <div class="one1-1-1">
+                        <a href="#">
+                            <img src="首页photo/four4.png" class="data-photo">
+                        </a>
+                    </div>
+                    <div class="media">
+                        <a href="#" class="subject">谱集TOP30</a>
+                        <a href="#" class="ranking">
+                            查看全部
+                        </a>
+                    </div>
+                </div>
+                <div class="listbox">
+                    <ul>
+                        <li class="odd">
+                            <a href="#" title="春之声——古典音乐大师献给春天的小品" class="titlee">
+                                <span class="txt-labell">1</span>
+                                <span class="thumb3">
+                                    <img src="首页photo/22.jpg">
+                                </span>
+                                <span class="ranking-txt">春之声——古典音</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="十首C调流行钢琴" class="titlee">
+                                <span class="txt-labell">2</span>
+                                <span class="thumb3">
+                                    <img src="首页photo/23.jpg">
+                                </span>
+                                <span class="ranking-txt1">十首C调流行钢琴</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="成人学钢琴必弹曲" class="titlee">
+                                <span class="txt-labell">3</span>
+                                <span class="thumb3">
+                                    <img src="首页photo/24.jpg">
+                                </span>
+                                <span class="ranking-txt">成人学钢琴必弹曲</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="抖音，那些你不可错过的BGM" class="titlee">
+                                <span class="txt-labell">4</span>
+                                <span class="thumb3">
+                                    <img src="首页photo/25.jpg">
+                                </span>
+                                <span class="ranking-txt1">抖音，那些你不可</span>
+                            </a>
+                        </li>
+                        <li class="odd">
+                            <a href="#" title="十首附指法的流行歌" class="titlee">
+                                <span class="txt-labell">5</span>
+                                <span class="thumb3">
+                                    <img src="首页photo/26.jpg">
+                                </span>
+                                <span class="ranking-txt">十首附指法的流行歌</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Pianist">
+        <div class="page-index-pianist">
+            <p class="Pianist-list">钢琴家</p>
+            <span class="全部2"><a href="#">全部></a></span>
+            <ul class="musician-avatar">
+                <li class="pull-left5">
+                    <a href="#" class="r01">
+                        <img src="首页photo/27.png">
+                    </a>
+                    <a href="#" title="朗朗" class="musician-name">朗朗</a>
+                </li>
+                <li class="pull-left5">
+                    <a href="#" class="r01">
+                        <img src="首页photo/28.png">
+                    </a>
+                    <a href="#" title="朗朗" class="musician-name">李云迪</a>
+                </li>
+                <li class="pull-left5">
+                    <a href="#" class="r01">
+                        <img src="首页photo/29.png">
+                    </a>
+                    <a href="#" title="朗朗" class="musician-name">陈萨</a>
+                </li>
+                <li class="pull-left5">
+                    <a href="#" class="r01">
+                        <img src="首页photo/30.png">
+                    </a>
+                    <a href="#" title="朗朗" class="musician-name">王羽佳</a>
+                </li>
+                <li class="pull-left5">
+                    <a href="#" class="r01">
+                        <img src="首页photo/31.jpg">
+                    </a>
+                    <a href="#" title="朗朗" class="musician-name">沈文裕</a>
+                </li>
+                <li class="pull-left5">
+                    <a href="#" class="r01">
+                        <img src="首页photo/32.jpg">
+                    </a>
+                    <a href="#" title="朗朗" class="musician-name">理查德·克莱德曼</a>
+                </li>
+                <li class="pull-left5">
+                    <a href="#" class="r01">
+                        <img src="首页photo/33.png">
+                    </a>
+                    <a href="#" title="朗朗" class="musician-name">久石让</a>
+                </li>
+                <li class="pull-left5">
+                    <a href="#" class="r01">
+                        <img src="首页photo/34.png">
+                    </a>
+                    <a href="#" title="朗朗" class="musician-name">李闰珉</a>
+                </li>
+                <li class="pull-left5">
+                    <a href="#" class="r01">
+                        <img src="首页photo/35.jpg">
+                    </a>
+                    <a href="#" title="朗朗" class="musician-name">法佐·赛依</a>
+                </li>
+                <li class="pull-left5">
+                    <a href="#" class="r01">
+                        <img src="首页photo/36.png">
+                    </a>
+                    <a href="#" title="朗朗" class="musician-name">马克西姆·姆尔维察</a>
+                </li>
+                <li class="pull-left5">
+                    <a href="#" class="r01">
+                        <img src="首页photo/37.png">
+                    </a>
+                    <a href="#" title="朗朗" class="musician-name">石进</a>
+                </li>
+                <li class="pull-left5">
+                    <a href="#" class="r01">
+                        <img src="首页photo/38.png">
+                    </a>
+                    <a href="#" title="朗朗" class="musician-name">白日梦</a>
+                </li>
+            </ul>
+        </div>
+        <div class="page-index-pianist2">
+            <p class="Pianist-list1">考级</p>
+            <span class="全部2"><a href="#">全部></a></span>
+            <ul class="musician-avatar">
+                <li class="pull-left6">
+                    <a href="#">
+                        <img src="首页photo/39.png">
+                        <span>中央音乐学院</span>
+                    </a>
+                </li>
+                <li class="pull-left6">
+                    <a href="#">
+                        <img src="首页photo/40.png">
+                        <span>中国音乐学院钢琴考级</span>
+                    </a>
+                </li>
+                <li class="pull-left6">
+                    <a href="#">
+                        <img src="首页photo/41.png">
+                        <span>上海音乐学院钢琴考级</span>
+                    </a>
+                </li>
+                <li class="pull-left6">
+                    <a href="#">
+                        <img src="首页photo/42.png">
+                        <span>天津音乐学院钢琴考级</span>
+                    </a>
+                </li>
+                <li class="pull-left6">
+                    <a href="#">
+                        <img src="首页photo/43.png">
+                        <span>四川音乐学院钢琴考级</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="ccm" class="container-clearfix">
+        <div class="help">
+            <ul class="Journalism">
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="名谱推荐｜青春纪念册-可米小子">名谱推荐｜青春纪念册-可米小子</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年06月12日 </span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/1.jpg" class="photo12">
+                        <span class="qu">钢琴谱</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="名曲推荐｜New York State Of Mind-Billy Joel ">名曲推荐｜New York State Of Mind-Billy Joel </a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">New York State Of Mind-Billy Joel</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年06月08日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/2.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute; top: 250px;">钢琴曲</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="新谱推荐｜送你一匹马-电视剧《北京女子图鉴》主题曲">新谱推荐｜送你一匹马-电视剧《北京女子图鉴》主题曲</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/10.jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">送你一匹马-电视剧《北京女子图鉴》主题曲</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年06月07日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/3.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 430px;">钢琴谱</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="流行钢琴教学｜《纸短情长》-琥珀琴师Louis">流行钢琴教学｜《纸短情长》-琥珀琴师Louis</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">《纸短情长》</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年06月06日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/一.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 620px;">视频栏目</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="新曲推荐｜《不爱我就拉倒》-周杰伦">新曲推荐｜《不爱我就拉倒》-周杰伦</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">《不爱我就拉倒》</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年06月05日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/5.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 800px;">钢琴曲</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="流行钢琴教学｜电视剧“恋爱先生”主题曲《温暖》-HM的钢琴城堡">流行钢琴教学｜电视剧“恋爱先生”主题曲《温暖》-HM的钢琴城堡</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="首页photo/二.jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行视频趋势  </span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">电视剧“恋爱先生”主题曲《温暖》</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年06月08日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/6.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 980px;">视频栏目</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="在北极弹钢琴红遍全球的音乐家，现在终于来中国演出了">在北极弹钢琴红遍全球的音乐家，现在终于来中国演出了</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="首页photo/三.jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">环球新闻</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">在北极弹钢琴红遍全球的音乐家，现在终于来中国演出了</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年06月04日</span>
+                    </div>
+                    <a href="#">
+                        <img src="新闻photo/1.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 1170px;">新闻</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="流行钢琴教学｜迪丽热巴/毛不易《浴火成诗》-琥珀琴师Louis">流行钢琴教学｜迪丽热巴/毛不易《浴火成诗》-琥珀琴师Louis</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">流行钢琴教学｜迪丽热巴/毛不易《浴火成诗》-琥珀琴师Louis</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年06月01日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/四.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 1350px;">视频栏目</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="新谱推荐｜初恋的地方-电影《超时空同居》主题曲">新谱推荐｜初恋的地方-电影《超时空同居》主题曲</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">初恋的地方-电影《超时空同居》主题曲（新谱推荐）</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年05月28日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/五.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 1530px;">钢琴谱</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="流行钢琴教学｜陈奕迅《我们》-HM的钢琴城堡">流行钢琴教学｜陈奕迅《我们》-HM的钢琴城堡</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/16...jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">爱乐经典 </span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">这首钢琴版的《我们》，总能让你从琴声中听到自己的回忆和故事。电影里那些遗憾的故事从来都不是教你怀念过去，而是在告诉你遗憾是无法回去的，如果不珍惜现在。也许这也会变成下一个遗憾</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年05月10日 </span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/六.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 1710px;">视频栏目</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="Journalism" id="jss" style="display: none">
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="钢琴家宋思衡在沪演出 与机器人同台合奏引观众欢呼">钢琴家宋思衡在沪演出 与机器人同台合奏引观众欢呼</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">钢琴家宋思衡在沪演出 与机器人同台合奏引观众欢呼</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年06月04日 </span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/七.jpg" class="photo12" style="margin-top: -40px">
+                        <span class="qu" style="position: absolute;top: 1890px;">新闻</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="名家教学视频｜“放松、放松、还是放松”心理与技术的结合-主讲秦川">名家教学视频｜“放松、放松、还是放松”心理与技术的结合-主讲秦川</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="首页photo/八.jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">环球古典视频</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">主讲人：秦川		中国青年钢琴家，国际乐坛最有影响力的全球十大华人钢琴家之一；是茱莉亚音乐学院百年历史上唯一同时获得最高演奏家文凭和最高博士学历的音乐家；音乐生涯中夺取了世界上曲目难度最高的法国“梅西安国际大赛”第一名等6项国际大赛的桂冠；2018年被授予施坦威艺术家的称号。</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年05月22日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/7.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute; top: 2080px;">视频栏目</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="流行钢琴教学｜不能说的秘密《Secret》-琥珀琴师Louis">流行钢琴教学｜不能说的秘密《Secret》-琥珀琴师Louis</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/10.jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">讲师：琥珀琴师Louis  流行钢琴新锐音乐人</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年06月07日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/九.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 2265px;">视频栏目</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="新谱推荐｜《佛系少女》-冯提莫">新谱推荐｜《佛系少女》-冯提莫</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">佛系少女为冯提莫最新单曲，...</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年05月30日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/十.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 2445px;">钢琴谱</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="新谱推荐｜The Avengers-电影《复仇者联盟3：无限战争》">新谱推荐｜The Avengers-电影《复仇者联盟3：无限战争》</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">The Avengers-电影《复仇者联盟3：无限战争》（新谱推荐）</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年06月05日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/十一.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 2625px;">钢琴谱</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="热曲推荐｜纸短情长-烟把儿乐队">热曲推荐｜纸短情长-烟把儿乐队</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">纸短情长是烟把儿乐队演唱的歌曲。关...</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年05月17日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/一.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 2810px;">钢琴谱</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="热曲推荐｜云烟成雨 - 动画《我是江小白》片尾曲">热曲推荐｜云烟成雨 - 动画《我是江小白》片尾曲</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋 </span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">云烟成雨是由墨鱼丝填词、黎偌天...</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年06月04日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/十二.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 2990px;">钢琴谱</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="新谱推荐｜哑巴-薛之谦">新谱推荐｜哑巴-薛之谦</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋</span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">哑巴是中国内地著名男歌手薛之谦...</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年05月16日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/十三.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 3180px;">钢琴谱</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="钢琴触键中的“必要劳动”和“多余劳动”">钢琴触键中的“必要劳动”和“多余劳动”</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="首页photo/十五.jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">环球文章精选 </span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">初恋的地方-电影《超时空同居》主题曲（新谱推荐）</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年05月21日</span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/十四.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 3360px;">文章</span>
+                    </a>
+                </li>
+                <li class="Journalism-1">
+                    <h4 class="Newsheadlines">
+                        <a href="#" class="Newsheadlines-1" title="热曲推荐｜戒烟-李荣浩">热曲推荐｜戒烟-李荣浩</a>
+                    </h4>
+                    <div class="time">
+                        <a href="#" class="头像">
+                            <img src="钢琴曲photo/9..jpg" class="photo">
+                        </a>
+                        <a href="#" class="ti">
+                            <span class="ti-1">流行先锋 </span>
+                        </a>
+                    </div>
+                    <div class="text-list-desc">戒烟是由李荣浩作词、作曲并演唱...</div>
+                    <div class="null"></div>
+                    <div class="底部提示">
+                        <span class="column">2018年05月10日 </span>
+                    </div>
+                    <a href="#">
+                        <img src="首页photo/十六.jpg" class="photo12" style="position: relative;top: -130px;">
+                        <span class="qu" style="position: absolute;top: 3545px;">钢琴谱</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="text-center1">
+            <a href="#jss" class="text-center" onclick="show();return false;">加载更多</a>
+        </div>
+    </div>
+    <div class="nav">
+        <span class="nac-1">友情链接：</span>
+        <span class="nav-1-1">
+            <a href="#">欧狮钢琴网</a>
+            <a href="#">U12家庭教育网</a>
+            <a href="#">艺林商学院</a>
+            <a href="#">中国古筝网</a>
+            <a href="#">玉振古筝</a>
+            <a href="#">琴棋书画网</a>
+            <a href="#">国琴网</a>
+        </span>
+    </div>
+</section>
+</div>
+<footer>
+    <nav>
+        <div class="g-ft">
+            <div class="g-inner">
+                <div class="m-links">
+                    <dl>
+                        <dt><a href="#" target="_blank">钢琴选购</a></dt>
+                        <dd><a href="#" target="_blank">珠江</a></dd>
+                        <dd><a href="#" target="_blank">yamaha</a></dd>
+                        <dd><a href="#" target="_blank">kawai</a></dd>
+                        <dd><a href="#" target="_blank">星海</a></dd>
+                        <dd><a href="#" target="_blank">里特米勒</a></dd>
+                        <dd><a href="#" target="_blank">海伦</a></dd>
+                        <dd><a href="#" target="_blank">恺撒堡</a></dd>
+                        <dd><a href="#" target="_blank">二手钢琴</a></dd>
+                        <dd><a href="#" target="_blank">钢琴报价</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#" target="_blank">琴谱下载</a></dt>
+                        <dd><a href="#" target="_blank">网友上传</a></dd>
+                        <dd><a href="#" target="_blank">大陆地区</a></dd>
+                        <dd><a href="#" target="_blank">欧美日韩</a></dd>
+                        <dd><a href="#" target="_blank">港台男歌手</a></dd>
+                        <dd><a href="#" target="_blank">港台女歌手</a></dd>
+                        <dd><a href="#" target="_blank">古典音乐</a></dd>
+                        <dd><a href="#" target="_blank">情调音乐</a></dd>
+                        <dd><a href="#" target="_blank">影视音乐</a></dd>
+                        <dd><a href="#" target="_blank">卡通音乐 </a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#" target="_blank">钢琴博客</a></dt>
+                        <dd><a href="#" target="_blank">博客日志</a></dd>
+                        <dd><a href="#" target="_blank">博客相片</a></dd>
+                        <dd><a href="#" target="_blank">博客排行</a></dd>
+                        <dd><a href="#" target="_blank">博客群</a></dd>
+                        <dd><a href="#" target="_blank">琴童家长</a></dd>
+                        <dd><a href="#" target="_blank">音乐老师</a></dd>
+                        <dd><a href="#" target="_blank">成人学琴</a></dd>
+                        <dd><a href="#" target="_blank">专业音乐人</a></dd>
+                        <dd><a href="#" target="_blank">调律师 </a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#" target="_blank">演奏录音</a></dt>
+                        <dd><a href="#" target="_blank">古典作品录音</a></dd>
+                        <dd><a href="#" target="_blank">流行作品录音</a></dd>
+                        <dd><a href="#" target="_blank">原创作品录音</a></dd>
+                        <dd><a href="#" target="_blank">钢琴视频分享 </a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#" target="_blank">技术交流</a></dt>
+                        <dd><a href="#" target="_blank">演奏之道</a></dd>
+                        <dd><a href="#" target="_blank">音乐理论</a></dd>
+                        <dd><a href="#" target="_blank">选琴维护</a></dd>
+                        <dd><a href="#" target="_blank">音乐软件</a></dd>
+                        <dd><a href="#" target="_blank">琴童之家</a></dd>
+                        <dd><a href="#" target="_blank">成人&初学者 </a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#" target="_blank">闲聊音乐</a></dt>
+                        <dd><a href="#" target="_blank">古典音乐</a></dd>
+                        <dd><a href="#" target="_blank">流行音乐</a></dd>
+                        <dd><a href="#" target="_blank">爵士音乐</a></dd>
+                        <dd><a href="#" target="_blank">其他乐器</a></dd>
+                        <dd><a href="#" target="_blank">综合讨论</a></dd>
+                        <dd><a href="#" target="_blank">琴感心情</a></dd>
+                        <dd><a href="#" target="_blank">聚会活动 </a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#" target="_blank">琴谱分享</a></dt>
+                        <dd><a href="#" target="_blank">寻谱留言</a></dd>
+                        <dd><a href="#" target="_blank">歌曲类琴谱</a></dd>
+                        <dd><a href="#" target="_blank">非歌曲类琴谱</a></dd>
+                        <dd><a href="#" target="_blank">原创钢琴谱</a></dd>
+                        <dd><a href="#" target="_blank">热门钢琴谱 </a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#" target="_blank">热门资源</a></dt>
+                        <dd><a href="#" target="_blank">卡农</a></dd>
+                        <dd><a href="#" target="_blank">键盘钢琴</a></dd>
+                        <dd><a href="#" target="_blank">夜的钢琴曲 </a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#" target="_blank">其他</a></dt>
+                        <dd><a href="#" target="_blank">和声理论</a></dd>
+                        <dd><a href="#" target="_blank">钢琴曲</a></dd>
+                        <dd><a href="#" target="_blank">本站图书</a></dd>
+                        <dd><a href="#" target="_blank">钢琴家教</a></dd>
+                        <dd><a href="#" target="_blank">打谱软件</a></dd>
+                        <dd><a href="#" target="_blank">繁体版</a></dd>
+                        <dd><a href="#" target="_blank">旧版首页</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </nav>
+</footer>
+</body>
+</html>

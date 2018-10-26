@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 120px;
+}
+#首行{
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    height: 40px;
+    line-height: 30px;
+    background: #eeeeee;
+    width: 1535px;
+    float: top;
+}
+#欢迎{
+    position: relative;
+    margin: 0 auto;
+    top: 8px;
+    left: 200px;
+    color: #92667c;
+    font-size: 13px;
+    padding: 0 0 0px 0;
+}
+.登陆注册{
+    position: relative;
+    top: -22px;
+    right: 150px;
+    display: inline-block;
+    color: black;
+    float: right;
+}
+.登陆注册 li{
+    margin: 0 20px;
+    display: inline-block;
+    font-size: 13px;
+    color: #92667c;
+}
+.登陆注册 li a{
+    text-decoration: none;
+}
+div img:first-of-type{
+    font-size: 5px;
+}
+#导航栏{
+    margin: -103px 0 0 500px;
+}
+#导航栏 li{
+    display: inline-block;
+    list-style-type: none;
+    width: 110px;
+    height: 99px;
+    text-align: center;
+    margin: 0 -5px 0 0;
+}
+#导航栏 a{
+    text-decoration: none;
+    line-height: 99px;
+    color: black;
+}
+#导航栏 a:hover{
+    color: #f2c21f;
+}
+#logo{
+    display: inline-block;
+    float: left;
+    margin: 20px 3px 0 150px;
+}
+#logo背景{
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    margin: -5px 0 10px 60px;
+    vertical-align: middle;
+    padding: 0 90px 25px 0px;
+    width: 300px;
+    height: 71px;
+}
+.阴影{
+    background-color: #343434;
+    position: relative;
+    top: 4px;
+    height: 4px;
+}
+.阴影1{
+    background-color: #b4b4b4;
+    position: relative;
+    top: 4px;
+    height: 3px;
+}
+.阴影2{
+    background-color: #343434;
+    position: relative;
+    top: 4px;
+    height: 4px;
+}
